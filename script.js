@@ -1,23 +1,26 @@
-var newDiv= $("<div>")
-newDiv.addClass("time-block row")
+for (let index = 0; index < 10; index++) {
+    var newDiv= $("<div>")
+    newDiv.addClass("time-block row")
 
 
-var newH4= $("<h4>")
-newH4.addClass("hour col-md-1") 
-newH4.text("9am")
+    var newH4= $("<h4>")
+    newH4.addClass("hour col-md-1") 
+    newH4.text("9am")
 
 
-var newTextarea= $("<textarea>")
-newTextarea.addClass("description col-md-10")
+    var newTextarea= $("<textarea>")
+    newTextarea.addClass("description col-md-10")
 
 
-var newButton= $("<button>")
-newButton.addClass("saveBtn col-md-1")
+    var newButton= $("<button>")
+    newButton.addClass("saveBtn col-md-1")
 
 
-var myContainer = $(".container")
-myContainer.append(newDiv)
+    var myContainer = $(".container")
+    myContainer.append(newDiv)
 
-newDiv.append(newH4)
-newDiv.append(newTextarea)
-newDiv.append(newButton)
+    newDiv.append(newH4)
+    newDiv.append(newTextarea)
+    newDiv.append(newButton)
+    
+}
