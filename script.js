@@ -1,7 +1,9 @@
 var hourArray = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm"]
 var militaryHours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
-
 var currentHour = moment().format('H');
+var theTextInput = $("<input>");
+
+
 
 for (let index = 0; index < 10; index++) {
     var newDiv= $("<div>")
@@ -38,8 +40,10 @@ for (let index = 0; index < 10; index++) {
         // Value is 2nd; Key comes 1st
 
         // use localstorage.setItem to save the text as value, and hour as key
-
+    
     })
+
+    
 
 
     var myContainer = $(".container")
