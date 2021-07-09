@@ -1,8 +1,6 @@
 var hourArray = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm"]
 var militaryHours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 var currentHour = moment().format('H');
-var theTextInput = $("<input>");
-
 
 
 for (let index = 0; index < 10; index++) {
@@ -30,22 +28,6 @@ for (let index = 0; index < 10; index++) {
     var newButton= $("<button>")
     newButton.addClass("saveBtn col-md-1")
 
-    newButton.on('click', function() {
-        // we want to save the text value of the textarea to your localstorage
-
-        // select the corresponding textarea
-
-        // get the textvalue of the text area
-
-        // Value is 2nd; Key comes 1st
-
-        // use localstorage.setItem to save the text as value, and hour as key
-    
-    })
-
-    
-
-
     var myContainer = $(".container")
     myContainer.append(newDiv)
 
@@ -54,5 +36,25 @@ for (let index = 0; index < 10; index++) {
     newDiv.append(newButton)
 
     newButton.append('<i class="fas fa-save"></i>');
-    
+ 
 }
+
+
+$(".saveBtn").on('click', function () {
+    var value = ($(this).siblings('.description').val());
+    var time = ($(this).siblings('.hour').text());
+
+    localStorage.setItem(time, value); 
+
+
+ function loadHistory (){
+     var myStuff = localStorage.getItem("someKey") //or whatever key you saved stuff under
+     console.log(myStuff)
+   
+     //put myStuff on the page
+   }
+   loadHistory()
+
+
+
+})
