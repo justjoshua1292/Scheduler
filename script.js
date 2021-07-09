@@ -3,6 +3,18 @@ var militaryHours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 var currentHour = moment().format('H');
 
 
+
+
+function loadHistory (){
+     var myStuff = localStorage.getItem("someKey") //or whatever key you saved stuff under
+     console.log(myStuff)
+   
+     //put myStuff on the page
+   }
+   loadHistory()
+
+
+
 for (let index = 0; index < 10; index++) {
     var newDiv= $("<div>")
     newDiv.addClass("time-block row")
@@ -45,16 +57,6 @@ $(".saveBtn").on('click', function () {
     var time = ($(this).siblings('.hour').text());
 
     localStorage.setItem(time, value); 
-
-
- function loadHistory (){
-     var myStuff = localStorage.getItem("someKey") //or whatever key you saved stuff under
-     console.log(myStuff)
-   
-     //put myStuff on the page
-   }
-   loadHistory()
-
 
 
 })
