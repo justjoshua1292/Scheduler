@@ -4,17 +4,6 @@ var currentHour = moment().format('H');
 
 
 
-
-function loadHistory (){
-     var myStuff = localStorage.getItem("someKey") //or whatever key you saved stuff under
-     console.log(myStuff)
-   
-     //put myStuff on the page
-   }
-   loadHistory()
-
-
-
 for (let index = 0; index < 10; index++) {
     var newDiv= $("<div>")
     newDiv.addClass("time-block row")
@@ -27,6 +16,7 @@ for (let index = 0; index < 10; index++) {
 
     var newTextarea= $("<textarea>")
     newTextarea.addClass("description col-md-10")
+    newTextarea.attr('id', hourArray[index])
 
     if(currentHour == militaryHours[index]) {
         newTextarea.addClass('present')
@@ -57,6 +47,20 @@ $(".saveBtn").on('click', function () {
     var time = ($(this).siblings('.hour').text());
 
     localStorage.setItem(time, value); 
+
+
+ function loadHistory (){
+    for (let index = 0; index < 10; index++) {
+        // select a textarea using its id
+        var myTextArea = $("#"+ hourArray[index])
+        // get the saved note from localstorage
+        var savedNote = localStorage.getItem(hourArray[index])
+       // if it exists, change the text of the textarea to the saved note
+       if(savedNote){
+            myTextArea.text(savedNote);
+       }
+    }
+}
 
 
 })
