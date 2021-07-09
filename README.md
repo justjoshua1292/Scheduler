@@ -2,7 +2,7 @@
 Assignment #5 HW Assignment
 
 The object of this assignment was to create a schedule planner for your day between the hours of 9am to 5pm, I actually went up to 6PM. We were given some starter code to work with that started us off in the right direction for this. We had to essentially create the Javascript portion from scratch! I created a simple calendar application that allows a user to save events for each hour of the day by modifying starter code previously given. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery, Local Storage, Bootstrap & the Moment.js library to work with date and time. When you load the page tomorrow or whenever this assignment is graded, you'll see some of the things i have planned for my day inside of gray text boxes on the page. The color green will show up for future events and for current events in that hour will be red. 
-Try it out & see for yourself!👌
+Try it out & see for yourself! My text will be gone, but you will be able to add your own text and once you refresh, the last thing you typed will show up!👌
 
 
 
